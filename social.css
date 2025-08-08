@@ -1,0 +1,159 @@
+/* SOCIAL */
+
+@keyframes morph {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 40% 60% 70% 30% / 50% 60% 30% 60%;
+  }
+}
+
+@keyframes morph2 {
+  0%, 100% {
+    border-radius: 50% 50% 40% 60% / 50% 60% 40% 50%;
+  }
+  50% {
+    border-radius: 60% 40% 60% 40% / 40% 50% 60% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.social-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.social-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: row-reverse;
+  cursor: pointer;
+
+  pointer-events: none;
+
+  &:hover {
+    .social-icons {
+      opacity: 1;
+      transform: translateX(0) scaleX(1);
+      pointer-events: auto;
+    }
+  }
+}
+
+.avatar-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  animation: morph 8s ease-in-out infinite;
+  z-index: 10;
+
+  pointer-events: auto;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 2;
+  border-radius: inherit;
+}
+
+.social-icons {
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transform: translateX(-12px) scaleX(0);
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform-origin: right center;
+
+  pointer-events: auto;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1) rotate(6deg);
+    }
+
+    &.linkedin {
+      background-color: #0077b5;
+
+      &:hover {
+        background-color: #004182;
+      }
+    }
+
+    &.github {
+      background-color: #181818;
+      color: white;
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+
+    &.instagram {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+  }
+}
+
+
+.avatar-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.fancy-border {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  animation: morph2 10s ease-in-out infinite;
+  z-index: 0;
+}
+
+.float-wrapper {
+  animation: float 6s ease-in-out infinite;
+}

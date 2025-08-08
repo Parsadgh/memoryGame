@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory game</title>
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="social.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- social media links -->
+    <div class="social-container">
+        <div class="social-wrapper">
+            <div class="float-wrapper hover-border-off">
+                <div class="avatar-wrapper">
+                    <div class="fancy-border"></div>
+                    <div class="avatar-container">
+                        <img src="me.jpg" alt="Parsa" class="avatar-img" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="social-icons">
+                <a href="https://github.com/Parsadgh" target="_blank" rel="noopener noreferrer" class="github"
+                    aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/parsa.sdgh.dev" target="_blank" rel="noopener noreferrer"
+                    class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/in/parsa-sadegh-440a572a2" target="_blank" rel="noopener noreferrer"
+                    class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup -->
+    <div class="pop" id="popup">
+        <div class="box">
+            <h2>Game end</h2>
+            <button id="close-btn" onclick="reastartGame()">reastart</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>memory game</h1>
+
+        <div class="board">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <h2 id="try">try: </h2>
+
+    </div>
+
+    <script src="master.js"></script>
+</body>
+</html>
